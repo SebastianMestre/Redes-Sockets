@@ -1,0 +1,117 @@
+\documentclass{beamer}
+
+\mode<presentation> {
+    
+\usetheme{Berlin}
+\usecolortheme{beaver}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Sockets]{Interfaz de sockets}
+\subtitle{Enviando y recibiendo datos desde un programa}
+\author{S. Mestre \and M. Roma \and I. Quintero}
+\institute[IPS UNR]{Instituto Politecnico Superior}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Overview}
+\tableofcontents
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{Protocolos}
+%------------------------------------------------
+
+\begin{frame}
+\huge{\centerline{Repaso De Protocolos}}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+    \frametitle{Repaso De Protocolos}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \textbf{TCP}
+            \begin{itemize}
+                \item Transmisi\'on confiable
+                \item Control de flujo
+                \item Orientado a la conexi\'on
+                \item Bidireccional
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \textbf{UDP}
+            \begin{center}
+                \begin{itemize}
+                    \item No es confiable
+                    \item Sin ACKs ni retransmisiones
+                    \item Sin conexi\'on
+                    \item Unidireccional
+                \end{itemize}
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}[fragile]
+    \frametitle{Archivos ≈ Sockets ( Primera Aproximaci\'on )}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{verbatim}
+FILE* fp = fopen(...);
+
+
+
+fwrite(fp, ...);
+fread(fp, ...);
+
+fclose(fp);    
+            \end{verbatim}        
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{verbatim}
+int sd = socket();
+bind(sd, ...);
+connect(sd, ...);
+
+send(sd, ...);
+recv(sd, ...);
+
+close(sd);
+            \end{verbatim}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\Huge{\centerline{Fin}}
+\end{frame}
+
+%------------------------------------------------
+
+\end{document} 
