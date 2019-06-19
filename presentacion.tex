@@ -76,6 +76,65 @@
 
 %------------------------------------------------
 
+\begin{frame}
+%    \frametitle{}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \textbf{¿Qu\e' es un socket?}\\
+                ¿Se come?
+            \end{center}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \textbf{UDP}
+            \begin{center}
+                Un socket no es m\a's que una abstracci\o'n, una forma de representar un concepto en nuestro c\o'digo.\\
+                Los sockets representan conexiones y ofrecen una interfaz uniforme para interactuar con ellas.
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+%    \frametitle{}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{center}
+                \textbf{¿Qu\e' lo caracteriza?}\\
+            \end{center}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \textbf{UDP}
+            \begin{center}
+                \begin{itemize}
+                    \item Una direccion IP
+                    \item Un n\u'mero de puerto
+                    \item Un protocolo (como TCP o UDP)
+                \end{itemize}
+            \end{center}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+    \frametitle{Beneficios de usar sockets}
+    Utilizando sockets. podemos 'separar' nuestro programa del protocolo que usamos. De esta manera, reducimos la cantidad de codigo mientras agregamos funcionalidad\\
+    Los sockets permiten intercambiar informacion entre procesos, posibilitando sistemas multi-proceso sin hacer hacks con mapeos de memoria.\\
+    Mediante el uso de sockets podemos construir contratos con garantias beneficiosas.
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+    \Huge{\centerline{Los sockets est\a'n b\a'rbaros}}
+\end{frame}
+
+%------------------------------------------------
+
 \begin{frame}[fragile]
     \frametitle{Archivos ≈ Sockets ( Primera Aproximaci\'on )}
     \begin{columns}
