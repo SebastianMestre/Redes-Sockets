@@ -18,8 +18,17 @@ un adversario)
 Ayuda a pepito a implementar su sistema completando su programa en C usando sockets.
 
 El sistema deberá tener una arquitectura cliente-servidor. Por un lado el cliente debe permitir 
-elegir a que servidor conectarse, establecer una conexión con el, verificar si esta autorizado,
-hacer intentos de ingreso al servidor y procesar la respuesta de este.
-El servidor debera permitir establecer una clave además de poder manejar conexiones de varios clientes
-pero solo dándole acceso a un solo cliente.
+elegir a que servidor conectars y establecer una conexión con el. Luego deberá mostrar una interfaz 
+que permita hacer intentos de ingreso al servidor ingresando contraseñas, además de recibir la respuesta
+del servidor, procesarla y mostrarla en pantalla antes de permitir hacer otro intento. Una vez que se 
+consiga acceso al servidor debe poder enviar mensajes de texto al servidor y la posibilidad de cerrar sesion. 
+
+El servidor debera permitir establecer una clave de acceso al iniciarse,luego deberá esperar recibir conexiones 
+de distintos clientes y posibilitar que estos hagan intentos de acceso. Una vez que un cliente logre acceder debe 
+rechazar intentos de acceso de otros clientes además de recibir mensajes de textos del cliente con acceso e imprimir los
+en pantalla, al final el cliente cerrará sesión lo que permitirá al servidor a darle acceso a otro cliente.
+
+Nota: El servidor debe permitir varias conexiones en simultaneo pero solo darle acceso a una sola.
+
+
 \end{document}
